@@ -48,3 +48,48 @@ footer {
     border-top: 1px solid var(--border-color);
     color: var(--text-color);
 }
+
+#pokemon-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#pokemon-form label {
+    width: 100%;
+    font-weight: bold;
+}
+
+#pokemon-search {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 12px;
+    background-color: var(--secondary-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font: inherit;
+}
+
+button {
+    padding: 12px 18px;
+    background-color: var(--accent-color);
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff7774;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
