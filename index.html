@@ -14,10 +14,27 @@
         <p>Discover Pokémon, their abilities, and stats.</p>
     </header>
 
-    <main>
-        <h2>Welcome to Pokémon Explorer</h2>
-        <p>Search for Pokémon and discover their information.</p>
-    </main>
+<main>
+    <section aria-labelledby="search-heading">
+        <h2 id="search-heading">Find a Pokémon</h2>
+
+        <form id="pokemon-form">
+            <label for="pokemon-search">Pokémon Name or ID</label>
+
+            <input
+                type="text"
+                id="pokemon-search"
+                placeholder="e.g. Pikachu"
+                required
+            >
+
+            <button type="submit">Search</button>
+            <button type="button" id="random-button">
+                Random Pokémon
+            </button>
+        </form>
+    </section>
+</main>
 
     <footer>
         <p>Data provided by PokéAPI.</p>
