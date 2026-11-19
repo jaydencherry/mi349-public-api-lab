@@ -93,3 +93,71 @@ input:focus-visible {
     outline: 2px solid #ffffff;
     outline-offset: 3px;
 }
+/* Pokemon results */
+
+#pokemon-result {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.pokemon-card {
+    background-color: var(--secondary-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.pokemon-card img {
+    display: block;
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.pokemon-card h3 {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+.pokemon-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pokemon-card li {
+    margin: 8px 0;
+}
+
+#status-message {
+    color: #c5c8d3;
+}
+
+/* Responsive layout */
+
+@media (min-width: 600px) {
+    .pokemon-card {
+        padding: 35px;
+    }
+
+    .pokemon-card img {
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 599px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    #pokemon-form button {
+        flex: 1 1 140px;
+    }
+}
