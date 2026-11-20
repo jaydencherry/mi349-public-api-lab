@@ -30,6 +30,33 @@ async function getPokemon(name) {
         console.error(error);
     }
 }
+// Display Pokemon information on the page
+function displayPokemon(pokemon) {
+    const image = pokemon.sprites.other["official-artwork"].front_default;
 
-// Test the API connection
+    const types = pokemon.types.map(type => type.type.name).join(", ");
+
+    const abilities = pokemon.abilities.map(ability => ability.ability.name).join(", ");
+
+    const stats = pokemon.stats.map(stat => {
+        return `<li>${stat.stat.name}: ${stat.base_stat}</li>`;
+    }).join("");
+
+    pokemonResult.innerHTML = `
+        <article class="pokemon-card">
+            <h3>${pokemon.name}</h3>
+
+            <img src="${image}" alt="${pokemon.name} artwork">
+
+            <p><strong>Pokédex Number:</strong> #${pokemon.id}</p>
+            <p><strong>Type:</strong> ${types}</p>
+            <p><strong>Abilities:</strong> ${abilities}</p>
+
+            <h4>Base Stats</h4>
+            <ul>
+                ${stats}
+            </ul>
+        </article>
+    `;
+}
 getPokemon("pikachu");
