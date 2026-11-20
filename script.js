@@ -22,6 +22,8 @@ async function getPokemon(name) {
 
         console.log(pokemon);
 
+        displayPokemon(pokemon);
+
         statusMessage.textContent = `Successfully found ${pokemon.name}!`;
     } catch (error) {
         statusMessage.textContent = "Could not find that Pokémon. Try again.";
