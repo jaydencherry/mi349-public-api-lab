@@ -59,4 +59,18 @@ function displayPokemon(pokemon) {
         </article>
     `;
 }
-getPokemon("pikachu");
+pokemonForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const pokemonName = pokemonSearch.value.trim().toLowerCase();
+
+    if (pokemonName !== "") {
+        getPokemon(pokemonName);
+    }
+});
+// Generate a random Pokemon
+randomButton.addEventListener("click", function() {
+    const randomId = Math.floor(Math.random() * 1025) + 1;
+
+    getPokemon(randomId);
+});
